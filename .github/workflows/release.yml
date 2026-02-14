@@ -1,0 +1,49 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Get version from tag
+        id: version
+        run: echo "VERSION=${GITHUB_REF#refs/tags/v}" >> $GITHUB_OUTPUT
+
+      - name: Create plugin zip
+        run: |
+          zip -r plant-plugin-${{ steps.version.outputs.VERSION }}.zip \
+            manifest.json main.js prompt.txt sprites/ \
+            -x "*.DS_Store"
+
+      - name: Create Release
+        uses: softprops/action-gh-release@v2
+        with:
+          name: v${{ steps.version.outputs.VERSION }}
+          body: |
+            ## Plant Pet - Dome Plugin v${{ steps.version.outputs.VERSION }}
+
+            Mascota planta que navega por el Home de Dome y chatea con Many.
+
+            ### Instalación
+            - Desde Dome: Settings > Plugins > Instalar desde repo: `maxprain12/plant`
+            - O descarga el zip y usa "Instalar desde carpeta"
+
+            ### Contenido
+            - manifest.json
+            - main.js
+            - prompt.txt
+            - sprites/
+          files: plant-plugin-${{ steps.version.outputs.VERSION }}.zip
+          draft: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
