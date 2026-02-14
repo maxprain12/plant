@@ -1,0 +1,15 @@
+{
+  "id": "dome-pet-plant",
+  "name": "Plant Pet",
+  "author": "maxprain12",
+  "description": "Mascota planta que navega por el Home y chatea con Many",
+  "version": "1.0.0",
+  "type": "pet",
+  "sprites": {
+    "idle": "sprites/idle.png",
+    "walk": ["sprites/walk-1.png", "sprites/walk-2.png"],
+    "wave": "sprites/wave.png",
+    "think": "sprites/think.png"
+  },
+  "repo": "maxprain12/plant"
+}
