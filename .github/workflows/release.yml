@@ -21,7 +21,7 @@ jobs:
 
       - name: Create plugin zip
         run: |
-          zip -r plant-plugin-${{ steps.version.outputs.VERSION }}.zip \
+          zip -r manny-plugin-${{ steps.version.outputs.VERSION }}.zip \
             manifest.json main.js prompt.txt sprites/ \
             -x "*.DS_Store"
 
@@ -30,9 +30,9 @@ jobs:
         with:
           name: v${{ steps.version.outputs.VERSION }}
           body: |
-            ## Plant Pet - Dome Plugin v${{ steps.version.outputs.VERSION }}
+            ## Manny - Dome Plugin v${{ steps.version.outputs.VERSION }}
 
-            Mascota planta que navega por el Home de Dome y chatea con Many.
+            Mascota fantasmito carismático y gracioso que navega por el Home de Dome y chatea con Many.
 
             ### Instalación
             - Desde Dome: Settings > Plugins > Instalar desde repo: `maxprain12/plant`
@@ -43,7 +43,7 @@ jobs:
             - main.js
             - prompt.txt
             - sprites/
-          files: plant-plugin-${{ steps.version.outputs.VERSION }}.zip
+          files: manny-plugin-${{ steps.version.outputs.VERSION }}.zip
           draft: false
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

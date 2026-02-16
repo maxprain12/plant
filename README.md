@@ -1,6 +1,6 @@
-# Plant Pet - Dome Plugin
+# Manny - Dome Plugin
 
-Mascota planta que navega por el Home de Dome y chatea con Many usando un prompt personalizado.
+Mascota fantasmito carismático y gracioso que navega por el Home de Dome y chatea con Many usando un prompt personalizado.
 
 ## Instalación
 
@@ -10,8 +10,8 @@ Mascota planta que navega por el Home de Dome y chatea con Many usando un prompt
 ## Uso
 
 - La mascota aparece en el Home de Dome y se mueve por la interfaz
-- Haz click en la mascota para abrir el chat de Many con la personalidad de Plant
-- Plant tiene su propio prompt: respuestas cortas, metáforas relacionadas con plantas
+- Haz click en la mascota para abrir el chat de Many con la personalidad de Manny
+- Manny tiene su propio prompt: carismático, gracioso, con una voz única y expresiones fantasma
 
 ## Sprites
 
@@ -20,4 +20,4 @@ Mascota planta que navega por el Home de Dome y chatea con Many usando un prompt
 - `wave.png` - Hover antes de abrir chat
 - `think.png` - Cuando Many está respondiendo
 
-Formato: PNG 32x32 o 64x64 px con transparencia.
+Formato: PNG 32x32 o 64x64 px con transparencia. Diseñados para un fantasmito (silueta blanquecina/sem-transparente, ojos, expresión amigable).

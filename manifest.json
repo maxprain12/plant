@@ -1,9 +1,9 @@
 {
-  "id": "dome-pet-plant",
-  "name": "Plant Pet",
+  "id": "dome-pet-manny",
+  "name": "Manny",
   "author": "maxprain12",
-  "description": "Mascota planta que navega por el Home y chatea con Many",
-  "version": "1.0.0",
+  "description": "Mascota fantasmito que navega por el Home y chatea con Many",
+  "version": "1.0.3",
   "type": "pet",
   "sprites": {
     "idle": "sprites/idle.png",
